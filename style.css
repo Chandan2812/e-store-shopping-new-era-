@@ -1,0 +1,172 @@
+body{
+    background-color: rgb(222, 248, 240);
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+    background-color: rgb(68, 66, 66);   
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.left>img{
+    width: 100px;
+    height: 100px;
+}
+.right{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    width: 50%;
+}
+.right>img{
+    width: 30px;
+    height: 30px;
+}
+.slide{
+overflow: hidden;
+margin-bottom: 20px;
+}
+.slider{
+   position: relative;
+    animation-name: slideranimation;
+    animation-duration: 20s;
+    width: 6750px;
+    animation-iteration-count: infinite;
+}
+.slider img{
+    width: 1350px;
+    float: left;
+}
+@keyframes slideranimation{
+    0%{ left: 0px;}
+    15%{  left: 0px;    }
+    20%{  left: -1350px;    }
+    35%{   left: -1350px;    }
+    40%{ left: -2700px;    }
+    55%{ left:-2700px;    }
+    60%{   left: -4050px;    }
+    75%{  left: -4050px;    }
+    80%{  left: -5400px;    }
+   95%{  left: -5400px;   }
+   }
+   .category{
+
+    display: grid;
+    grid-template-columns: repeat(11,1fr);
+    margin:50px 20px;
+  
+   }
+   .category:hover{
+    cursor: pointer;
+   }
+  
+   .category img{
+    width:100px ;
+   }
+   .discount{
+    display: flex;
+    justify-content: center;
+    
+    width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+   }
+   .discount img{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    margin: 15px;
+    border-radius: 8px;
+   }
+   .offers{
+    display: flex;
+    color: white;
+   border-radius: 15px;
+    width: 70%;
+    margin: auto;
+    background-color: rgb(222, 34, 34);
+    margin-bottom: 40px;
+   }
+   .offers>div:nth-child(1){
+    border-right: 2px solid white;
+     width: 42%;
+     margin: 10px;
+   margin-right: 20px;
+   }
+   .offers>div:nth-child(2){
+    color: rgb(201, 197, 197);
+   }
+   .offers h1{
+  margin-top: 30px;
+   text-align: center;
+   }
+   span{
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+   }
+   
+   .discount>div>img:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
+   }
+   .text{
+    text-align: center;
+   height: 40px;
+    width: 30%;
+  padding-top: 30px;
+  padding-bottom: 10px;
+    margin: auto;
+    border-radius: 40px;
+    background-color: rgb(244, 213, 220);
+    color: rgb(21, 21, 21);
+   }
+   #text{
+    text-align: center;
+    color: rgb(21, 21, 21);
+   }
+   .footer{
+    background-color: grey;
+   
+    padding-top: 30px;
+   }
+   table{
+    width: 80%;
+    margin: auto;
+    
+    text-align: left;
+    color: white;
+    
+   }
+   th{
+    color: black;
+    font-size: 20px;
+    margin: 10px;
+   }
+   tr{
+    margin: 10px;
+   }
+   td:hover{
+    cursor: pointer;
+   }
+   .last{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    width: 100%;
+   }
+   .bottom{
+    display: flex;
+   
+    justify-content: space-around;
+    width: 20%;
+    align-items: center;
+   }
+   .bottom>img{
+    width: 30px;
+    height: 30px;
+   }
