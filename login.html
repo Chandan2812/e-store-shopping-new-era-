@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Registration</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="left">
+            <img src="logo.png">
+        </div>
+        <div class="right">
+            <a href="index.html">Home</a>
+            <a href="">Products</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+            <a href="login.html">Account</a>
+            <img src="cart.png" >
+        </div>
+    </div>
+<!-- ------account page-------- -->
+<div class="container">
+    <div class="left-div">
+        <img src="image/img11.png">
+    </div>
+    <div class="right-div">
+        <div class="form-container">
+            <div class="form-btn">
+                <span onclick="login()">Login</span>
+                <span onclick="register()">Register</span>
+                <hr id="indicator">
+            </div>
+            <form  id="loginform">
+                <input type="email" placeholder="Email" id="lemail">
+                <input type="password" placeholder="Password" id="lpass">
+                <input type="submit" value="Submit" class="btn" >
+                <a href="">Forgot Password</a>
+            </form>
+            <form id="regform">
+                <input type="text" placeholder="Username" id="rname">
+                <input type="email" placeholder="Email" id="remail">
+                <input type="password" placeholder="Password" id="rpass">
+                <input type="submit" class="btn"  value="Register">
+                
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- -----footer page------ -->
+<div class="footer">
+
+    <table>
+        <thead>
+           <tr>
+            <th>E-Store MarketPlace</th>
+            <th>Customer Service</th>
+            <th>My E-Store</th>
+            <th>E-Store Offerings</th>
+           </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>About us</td>
+                <td>Shopping</td>
+                <td>My Account</td>
+                <td>Watches for Men | Campus Shoes | Sandals for Men</td>
+            </tr>
+            <tr>
+                <td>Careers</td>
+                <td>Offers & Promotions</td>
+                <td>My Orders</td>
+                <td>Cotton Kurtis | Woodland Shoes | Allen Solly</td>
+            </tr>
+            <tr>
+                <td>Sell with us</td>
+                <td>Payments</td>
+                <td>My Shopping Bag</td>
+                <td>Sparx Shoes | Gold Rings | Formal Shoes</td>
+            </tr>
+            <tr>
+                <td>Terms of Use</td>
+                <td>Returns & Refunds</td>
+                <td>My Wishlist</td>
+                <td>Wallets | Trolley Bags | Handbags for Women</td>
+            </tr>
+            <tr>
+                <td>Privacy Policy</td>
+                <td>Cancellation</td>
+                <td></td>
+                <td>Boots | Jumpsuits | Digital Watches</td>
+            </tr>
+            <tr>
+                <td>Sitemap</td>
+                <td>Electronics Returns Policy</td>
+                <td></td>
+                <td>Sneakers | Malabargold | Fabindia</td>
+            </tr>
+            <tr>
+                <td>Affiliates</td>
+                <td>Contact Us</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Reviews Guidelines</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </tbody>
+    </table>
+        
+<!-- -----footer------ -->
+
+<div class="last">
+    <div class="bottom">
+        <h3>Download App</h3>
+        <img src="cat/and.png">
+        <img src="cat/app.png">
+    </div>
+    <div class="bottom">
+        <img src="cat/f.png"><img src="cat/t.png"><img src="cat/i.jpg"><img src="cat/l.jpg">
+    </div>
+    <div class="bottom">
+        <h3>E-Store | All Right Reserved</h3>
+    </div>
+
+</div>
+</div>
+</body>
+<script>
+    var loginform=document.getElementById("loginform")
+    var regform=document.getElementById("regform")
+    var indicator=document.getElementById("indicator")
+    function register(){
+        regform.style.transform="translate(0px)";
+        loginform.style.transform="translate(0px)";
+        indicator.style.transform="translate(80px)";
+    }
+    function login(){
+        regform.style.transform="translate(400px)";
+        loginform.style.transform="translate(400px)";
+        indicator.style.transform="translate(-80px)";
+    }
+    // -----------sign up----------
+    let myform1 = document.querySelector("#regform");
+  let inputName = document.querySelector("#rname");
+  let inputEmail = document.querySelector("#remail");
+  let inputPass = document.querySelector("#rpass");
+  let LSdata=JSON.parse(localStorage.getItem("user-data"))||[];
+
+
+  myform1.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    let obj = {
+      name: inputName.value,
+      email : inputEmail.value,
+      pass : inputPass.value,
+    };
+    LSdata.push(obj);
+    
+    localStorage.setItem("user-data", JSON.stringify(LSdata))
+    alert("Account created")
+  })
+
+//   ---------------login-----------------
+  let flag=0;
+    let email = document.querySelector("#lemail");
+    let pass = document.querySelector("#lpass");
+    let myForm2 = document.querySelector("#loginform");   
+    let data = JSON.parse(localStorage.getItem("user-data"))||[];
+  
+    myForm2.addEventListener("submit",(e)=>{
+      e.preventDefault();
+      let myEmail = email.value;
+      let myPass = pass.value; 
+      for(let i=0;i<data.length;i++)
+      {
+        if(data[i].email==myEmail && data[i].pass==myPass)
+        {
+            flag=1;
+            break;
+        }
+      }
+      if(flag==1)
+      {
+        alert("Login successfully")
+      }
+      else{
+        alert("Wrong Credentials")
+      }
+    })    
+</script>
+</html>
