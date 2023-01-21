@@ -1,0 +1,143 @@
+body{
+    background-color: rgb(222, 248, 240);
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+    background-color: rgb(68, 66, 66);  
+    margin-bottom: 30px; 
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.left>img{
+    width: 100px;
+    height: 100px;
+}
+.right{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    width: 50%;
+}
+.right>img{
+    width: 30px;
+    height: 30px;
+}
+.right>a:hover{
+    color: rgb(83, 148, 175);
+}
+/* ------------------------------- */
+#box{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#container{
+    width: 70%;
+}
+#container>div{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    margin-bottom: 15px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+#container>div>div{
+    margin: 10px;
+   
+}
+#container>div>div>img{
+    width: 200px;
+}
+#container>div>div>div{
+    display: flex;
+    margin-top: 20px;
+}
+#container>div>div>div>button{
+    margin-right: 20px;
+}
+#container>div button:hover{
+    background-color: rgb(243, 47, 47);
+    color: white;
+}
+#container2{
+    width:25%;
+   margin-right: 30px;
+    background-color: white;
+    height: 400px;
+    padding: 15px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+#container2>div{
+    background-color: rgb(205, 205, 106);
+}
+#cart-total{
+    margin-left: 90px;
+}#total{
+    margin: 90px;
+}
+#container2>button{
+    width: 80%;
+    margin:5px 20px;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    background-color: green;
+    color: white;
+}
+#container2>button:hover{
+    background-color: rgb(122, 28, 28);
+}
+
+/* ---------------------------------------- */
+
+ .footer{
+    background-color: grey;
+   margin-top: 40px;
+    padding-top: 30px;
+   }
+   table{
+    width: 80%;
+    margin: auto;
+    
+    text-align: left;
+    color: white;
+    
+   }
+   th{
+    color: black;
+    font-size: 20px;
+    margin: 10px;
+   }
+   tr{
+    margin: 10px;
+   }
+   td:hover{
+    cursor: pointer;
+   }
+   .last{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    width: 100%;
+   }
+   .bottom{
+    display: flex;
+   
+    justify-content: space-around;
+    width: 20%;
+    align-items: center;
+   }
+   .bottom>img{
+    width: 30px;
+    height: 30px;
+   }

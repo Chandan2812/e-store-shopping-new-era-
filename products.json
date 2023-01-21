@@ -1,0 +1,202 @@
+[
+    {
+        "id":1,
+        "image":"https://rukminim1.flixcart.com/image/832/832/xif0q/t-shirt/m/o/a/xxl-tsr-216-reya-original-imagkc3jdumhese4.jpeg?q=70",
+        "brand":"Reya",
+        "desc":"Men Printed Round Neck Blue T-Shirt",
+        "price":299,
+        "rating":4.0,
+        "category":"Men's Clothing"
+
+    },
+    {
+        "id":2,
+        "image":"https://rukminim1.flixcart.com/image/832/832/xif0q/t-shirt/o/e/j/m-all-war-one-nb-nicky-boy-original-imagjz84ggtf8dmx.jpeg?q=70",
+        "brand":"NB NICKY BOY",
+        "desc":"Men Typography Hooded Neck Red, Black T-Shirt",
+        "price":499,
+        "rating":4.2,
+        "category":"Men's Clothing"
+
+    },
+    {
+        "id":3,
+        "image":"https://rukminim1.flixcart.com/image/612/612/xif0q/track-pant/p/p/s/xxl-av104-1l-navy-1l-olive-avolt-original-imagjh6kf4xf83hs.jpeg?q=70",
+        "brand":"AVOLT ",
+        "desc":"Men Solid Blue, Olive Track Pants",
+        "price":"699",
+        "rating":3.9,
+        "category":"Men's Clothing"
+
+    },
+    {
+        "id":4,
+        "image":"https://rukminim1.flixcart.com/image/832/832/xif0q/shoe/p/c/5/-original-imaghrbyty4ggzcb.jpeg?q=70",
+        "brand":"PUMA",
+        "desc":"Zod Runner V3 Running Shoes For Men  (White",
+        "price":1039,
+        "rating":4.3,
+        "category":"Footwear"
+
+    },
+    {
+        "id":5,
+        "image":"https://rukminim1.flixcart.com/image/832/832/krayqa80/slipper-flip-flop/m/8/y/6-la9524-layasa-yellow-black-original-imag54ryefqzn9xf.jpeg?q=70",
+        "brand":"Layasa ",
+        "desc":"Flip Flops  (Yellow, Black 3)",
+        "price":299,
+        "rating":4.1,
+        "category":"Footwear"
+
+    },
+    {
+        "id":6,
+        "image":"https://rukminim1.flixcart.com/image/312/312/ky7lci80/mobile/t/x/j/-original-imagahvge92r5fmm.jpeg?q=70",
+        "brand":"ASUS ",
+        "desc":"ASUS ROG 5s (Black, 128 GB) ",
+        "price":39999,
+        "rating":4.2,
+        "category":"Electronics"
+
+    },
+    {
+        "id":7,
+        "image":"https://rukminim1.flixcart.com/image/832/832/xif0q/gown/a/b/j/15-year-m-3-4-sleeve-stitched-ag-506-sd-red-aaryahi-70-year-original-imaghr3hxkbvgcdx.jpeg?q=70",
+        "brand":"Aaryahi ",
+        "desc":"Printed Viscose Rayon Stitched Anarkali Gown",
+        "price":646,
+        "rating":3.8,
+        "category":"Women's Clothing"
+
+    },
+    {
+        "id":8,
+        "image":"https://rukminim1.flixcart.com/image/312/312/xif0q/television/m/n/p/-original-imagkzctc2gkvfgf.jpeg?q=70",
+        "brand":"SAMSUNG ",
+        "desc":"SAMSUNG 80 cm (32 Inch) HD Ready LED Smart Tizen TV",
+        "price":11999,
+        "rating":4.0,
+        "category":"Electronics"
+
+    },
+    {
+        "id":9,
+        "image":"https://rukminim1.flixcart.com/image/416/416/kpedle80/curtain/t/c/z/panel-garden-dr-brown-214-door-hs2pc000992dr-eyelet-home-sizzler-original-imag3n7yayhahavq.jpeg?q=70",
+        "brand":"Sizzler",
+        "desc":"Polyester Room Darkening Window Curtain",
+        "price":299,
+        "rating":4.1,
+        "category":"Home Furnishing"
+
+    },
+    {
+        "id":10,
+        "image":"https://rukminim1.flixcart.com/image/416/416/xif0q/blanket/y/h/a/super-soft-double-roll-comforter-for-all-weather-1pc-rumba-original-imaghshuym9qwddy.jpeg?q=70",
+        "brand":"Kopa ",
+        "desc":"Striped Double Comforter for AC Room",
+        "price":1149,
+        "rating":3.8,
+        "category":"Home Furnishing"
+
+    },
+    {
+        "id":11,
+        "image":"https://rukminim1.flixcart.com/image/832/832/xif0q/lehenga-choli/w/o/t/free-half-sleeve-bandhani-lehenga-pmd-fashion-original-imagktugpm2ghgfe.jpeg?q=70",
+        "brand":"PMD Fashion ",
+        "desc":"Semi Stitched Lehenga Choli",
+        "price":700,
+        "rating":3.9,
+        "category":"Women's Clothing"
+
+    },
+    {
+        "id":12,
+        "image":"https://rukminim1.flixcart.com/image/416/416/l37mtu80/washing-machine-new/n/i/n/-original-imagednhyxjeh8xc.jpeg?q=70",
+        "brand":"realme ",
+        "desc":"Semi Automatic Top Load White",
+        "price":7490,
+        "rating":3.7,
+        "category":"Electronics"
+
+    },
+    {
+        "id":13,
+        "image":"https://rukminim1.flixcart.com/image/612/612/l51d30w0/jean/q/i/h/32-mss22mjn144-metronaut-original-imagfsvhnhfggqnb.jpeg?q=70",
+        "brand":"METRONAUT",
+        "desc":"Men Slim Mid Rise Blue Jeans",
+        "price":474,
+        "rating":3.9,
+        "category":"Bottomwear"
+
+    },
+    {
+        "id":14,
+        "image":"https://rukminim1.flixcart.com/image/832/832/xif0q/jean/j/x/z/32-2525011-roadster-original-imafdwskaazvbwsy-bb.jpeg?q=70",
+        "brand":"Roadster ",
+        "desc":"Men Regular Mid Rise Black Jeans",
+        "price":699,
+        "rating":4.3,
+        "category":"Bottomwear"
+
+    },
+    {
+        "id":15,
+        "image":"https://rukminim1.flixcart.com/image/832/832/ks7tuvk0/watch/l/v/2/d230-w-737h-2avdf-casio-original-imag5tu2gzg9yd5a.jpeg?q=70",
+        "brand":"CASIO ",
+        "desc":" Digital Watch - For Boys & Girls",
+        "price":1949,
+        "rating":4.4,
+        "category":"Watches"
+
+    },
+    {
+        "id":16,
+        "image":"https://rukminim1.flixcart.com/image/612/612/kzsqykw0/stuffed-toy/8/h/d/3-feet-pink-teddy-bear-with-neck-bow-88-os-retail-original-imagbqbycvygkak2.jpeg?q=70",
+        "brand":"Osjs ",
+        "desc":"teddy bear pink colors size 3 feet",
+        "price":949,
+        "rating":4.2,
+        "category":"Toys"
+
+    },
+    {
+        "id":17,
+        "image":"https://rukminim1.flixcart.com/image/416/416/kr6oeq80/trimmer/g/h/y/0-5-15-mm-ng-1145-stainless-steel-cordless-nova-original-imag5yzwu7pcsgep.jpeg?q=70",
+        "brand":"NOVA ",
+        "desc":"NOVA NG 1145 Trimmer",
+        "price":749,
+        "rating":4.1,
+        "category":"Electronics"
+
+    },
+    {
+        "id":18,
+        "image":"https://rukminim1.flixcart.com/image/416/416/xif0q/smartwatch/i/h/v/-original-imaghkpkaxmzpgxc.jpeg?q=70",
+        "brand":"boAt ",
+        "desc":"boAt Wave Infinity with 1.85 HD Screen",
+        "price":2499,
+        "rating":4.5,
+        "category":"Watches"
+
+    },
+    {
+        "id":19,
+        "image":"https://rukminim1.flixcart.com/image/832/832/xif0q/fabric/8/t/e/yes-2-m-unstitched-2-10m-black-flower-yashika-original-imaghjh9bhdzpepg.jpeg?q=70",
+        "brand":"yashika ",
+        "desc":"Unstitched Crepe Salwar Suit Material Solid",
+        "price":669,
+        "rating":4.0,
+        "category":"Women's Clothing"
+
+    },
+    {
+        "id":20,
+        "image":"https://rukminim1.flixcart.com/image/416/416/kfu0h3k0/condiment-set/k/m/s/211-3d-metro-super-store-original-imafw79uyk4qzffp.jpeg?q=70",
+        "brand":"3D METRO",
+        "desc":"250 ml Plastic Utility Container",
+        "price":299,
+        "rating":4.2,
+        "category":"Home Furnishing"
+
+    }
+]
