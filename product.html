@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="left">
+            <img src="logo.png">
+        </div>
+        <div class="right">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+            <a href="login.html">Account</a>
+            <a href="cart.html">&#128722</a>
+        </div>
+    </div>
+    <!-- ------------------------------ -->
+    <div id="parent">
+       
+        <div>
+            <input type="search" placeholder="Search by Products" id="sss">
+            <button id="btn">&#128269</button>
+        </div>
+       <div>
+        <select  id="cate">
+            <option value="">Category</option>
+            <option value="Men's Clothing">Men's Clothing</option>
+            <option value="Footwear">Footwear</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Home Furnishing">Home Furnishing</option>
+            <option value="Women's Clothing">Women's Clothing</option>
+            <option value="Bottomwear">Bottomwear</option>
+            <option value="Watches">Watches</option>
+            <option value="Toys">Toys</option>
+          </select>
+       
+        <select  id="sortprice">
+            <option value="">Sort By Price</option>
+            <option value="h2l">High to Low</option>
+            <option value="l2h">Low to High</option>
+          </select>
+       </div>
+    </div>
+
+<!-- ------------------------------------------------- -->
+
+    <div id="container"></div>
+
+    <div class="page">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>&#8594</span>
+    </div>
+    <!-- ----------------------------------------- -->
+
+    <div class="footer">
+
+        <table>
+            <thead>
+               <tr>
+                <th>E-Store MarketPlace</th>
+                <th>Customer Service</th>
+                <th>My E-Store</th>
+                <th>E-Store Offerings</th>
+               </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>About us</td>
+                    <td>Shopping</td>
+                    <td>My Account</td>
+                    <td>Watches for Men | Campus Shoes | Sandals for Men</td>
+                </tr>
+                <tr>
+                    <td>Careers</td>
+                    <td>Offers & Promotions</td>
+                    <td>My Orders</td>
+                    <td>Cotton Kurtis | Woodland Shoes | Allen Solly</td>
+                </tr>
+                <tr>
+                    <td>Sell with us</td>
+                    <td>Payments</td>
+                    <td>My Shopping Bag</td>
+                    <td>Sparx Shoes | Gold Rings | Formal Shoes</td>
+                </tr>
+                <tr>
+                    <td>Terms of Use</td>
+                    <td>Returns & Refunds</td>
+                    <td>My Wishlist</td>
+                    <td>Wallets | Trolley Bags | Handbags for Women</td>
+                </tr>
+                <tr>
+                    <td>Privacy Policy</td>
+                    <td>Cancellation</td>
+                    <td></td>
+                    <td>Boots | Jumpsuits | Digital Watches</td>
+                </tr>
+                <tr>
+                    <td>Sitemap</td>
+                    <td>Electronics Returns Policy</td>
+                    <td></td>
+                    <td>Sneakers | Malabargold | Fabindia</td>
+                </tr>
+                <tr>
+                    <td>Affiliates</td>
+                    <td>Contact Us</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Reviews Guidelines</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    
+            </tbody>
+        </table>
+            
+    
+    
+    <div class="last">
+        <div class="bottom">
+            <h3>Download App</h3>
+            <img src="cat/and.png">
+            <img src="cat/app.png">
+        </div>
+        <div class="bottom">
+            <img src="cat/f.png"><img src="cat/t.png"><img src="cat/i.jpg"><img src="cat/l.jpg">
+        </div>
+        <div class="bottom">
+            <h3>E-Store | All Right Reserved</h3>
+        </div>
+    
+    </div>
+    </div>
+</body>
+
+<script>
+    let fetchedData=[];
+        fetch("./products.json")
+    .then((response)=>{
+        return response.json();
+    })
+    .then((data)=>{
+        console.log(data)
+
+        display(data)
+        fetchedData=data;
+    })
+    let container=document.querySelector("#container")
+    let myCart=JSON.parse(localStorage.getItem("cart"))||[];
+    function display(data)
+    
+    {
+        container.innerHTML=""
+            data.forEach(element => {
+            let products=document.createElement("div")
+
+            let img=document.createElement("img")
+            img.setAttribute("src",element.image)
+
+            let brand=document.createElement("h2")
+            brand.innerText=element.brand
+
+            let description=document.createElement("p")
+            description.innerText=element.desc;
+
+            let price=document.createElement("h1")
+            price.innerText=   `₹${element.price}`;
+
+            let Rating=document.createElement("h3")
+            Rating.innerText=element.rating
+            let btn=document.createElement("button")
+            btn.innerText="Add to Cart"
+            // ------------------add2cart------------------------
+
+            btn.addEventListener("click",()=>{
+         
+           if(check(element))
+           {
+            alert("Product already in cart")
+           }
+           else{
+            myCart.push({...element,quantity:1})
+            localStorage.setItem("cart",JSON.stringify(myCart))
+            alert("Product added to cart")
+           }
+            
+          })
+
+            products.append(img,brand,description,price,Rating,btn)
+          container.append(products) 
+
+        });
+    }
+
+    function check(product){
+        for(let i=0;i<myCart.length;i++)
+        {
+            if(myCart[i].id===product.id){
+                return true;
+            }
+        }
+        return false;
+    }
+// ----------sorting-----------------
+    let sortprice=document.getElementById("sortprice")
+   sortprice.addEventListener("change",function(){
+    if(sortprice.value===""){
+        fetch("./products.json")
+    .then((response)=>{
+        return response.json();
+    })
+    .then((data)=>{
+        
+        display(data)
+    })
+    }
+    if(sortprice.value==="h2l")
+    {
+      let newdata=fetchedData.sort((a,b)=>b.price-a.price)
+      display(newdata)
+    }
+    if(sortprice.value==="l2h")
+    {
+      newdata=fetchedData.sort((a,b)=>a.price-b.price)
+      display(newdata)
+    }
+    
+   })
+
+//    -------------------------filter-------------------------
+
+let select=document.getElementById("cate")
+select.addEventListener("change",function(){
+    if(select.value===""){
+        fetch("./products.json")
+    .then((response)=>{
+        return response.json();
+    })
+    .then((data)=>{
+        
+        display(data)
+    })
+    }
+    let filtered=fetchedData.filter((el)=>{
+        if(select.value===el.category){
+            return true;
+        }
+        else{
+            return false;
+        }
+    })
+    display(filtered)
+})
+
+// -------------search-----------------
+let btn=document.getElementById("btn")
+let inpel=document.getElementById("sss")
+btn.addEventListener("click",()=>{
+    let inp=inpel.value;
+ filtered=fetchedData.filter((el)=>{
+    if(el.desc.toUpperCase().includes(inp.toUpperCase())===true)
+    {
+        return true;
+    }
+    else{
+        return false;
+    }
+ })
+ display(filtered);
+})
+
+
+
+
+
+</script>
+</html>

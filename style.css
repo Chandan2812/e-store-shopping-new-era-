@@ -29,6 +29,10 @@ a{
     width: 30px;
     height: 30px;
 }
+.right>a:hover{
+    color: rgb(83, 148, 175);
+}
+/* --------------------- */
 .slide{
 overflow: hidden;
 margin-bottom: 20px;

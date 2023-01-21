@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="left">
+            <img src="logo.png">
+        </div>
+        <div class="right">
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+            <a href="login.html">Account</a>
+            <a href="cart.html">&#128722</a>
+        </div>
+    </div>
+    <!-- ------------------------------ -->
+
+   <div id="box">
+    <div id="container">      
+    </div>
+    <div id="container2">
+        <div>
+            <h1>Cart totals</h1>
+        </div>
+       
+        
+        <br>     
+       
+       <h2>Cart Price:<span id="cart-total">0</span></h2>
+       <br>
+       <h2>Shipping fee:<span id="cart-total">free</span></h2>
+       <br>
+       <hr>
+       <h1>Total: <span id="total">0</span></h1>
+       
+        <button><b>Checkout</b></button>
+       
+    </div>
+   </div>
+
+  
+    <!-- ------------------------------------------ -->
+    <div class="footer">
+
+        <table>
+            <thead>
+               <tr>
+                <th>E-Store MarketPlace</th>
+                <th>Customer Service</th>
+                <th>My E-Store</th>
+                <th>E-Store Offerings</th>
+               </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>About us</td>
+                    <td>Shopping</td>
+                    <td>My Account</td>
+                    <td>Watches for Men | Campus Shoes | Sandals for Men</td>
+                </tr>
+                <tr>
+                    <td>Careers</td>
+                    <td>Offers & Promotions</td>
+                    <td>My Orders</td>
+                    <td>Cotton Kurtis | Woodland Shoes | Allen Solly</td>
+                </tr>
+                <tr>
+                    <td>Sell with us</td>
+                    <td>Payments</td>
+                    <td>My Shopping Bag</td>
+                    <td>Sparx Shoes | Gold Rings | Formal Shoes</td>
+                </tr>
+                <tr>
+                    <td>Terms of Use</td>
+                    <td>Returns & Refunds</td>
+                    <td>My Wishlist</td>
+                    <td>Wallets | Trolley Bags | Handbags for Women</td>
+                </tr>
+                <tr>
+                    <td>Privacy Policy</td>
+                    <td>Cancellation</td>
+                    <td></td>
+                    <td>Boots | Jumpsuits | Digital Watches</td>
+                </tr>
+                <tr>
+                    <td>Sitemap</td>
+                    <td>Electronics Returns Policy</td>
+                    <td></td>
+                    <td>Sneakers | Malabargold | Fabindia</td>
+                </tr>
+                <tr>
+                    <td>Affiliates</td>
+                    <td>Contact Us</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Reviews Guidelines</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+    
+            </tbody>
+        </table>
+            
+    
+    
+    <div class="last">
+        <div class="bottom">
+            <h3>Download App</h3>
+            <img src="cat/and.png">
+            <img src="cat/app.png">
+        </div>
+        <div class="bottom">
+            <img src="cat/f.png"><img src="cat/t.png"><img src="cat/i.jpg"><img src="cat/l.jpg">
+        </div>
+        <div class="bottom">
+            <h3>E-Store | All Right Reserved</h3>
+        </div>
+    
+    </div>
+    </div>
+</body>
+<script>
+
+            let amt=document.getElementById("total")
+             let container=document.querySelector("#container")
+             let total=document.getElementById("cart-total")
+            let myCart=JSON.parse(localStorage.getItem("cart"))||[];
+            function display(data)
+    
+        {
+                 container.innerHTML=""
+            data.forEach(element => {
+                let big=document.createElement("div")
+            let products=document.createElement("div")
+            let productDetails=document.createElement("div")
+            let btn=document.createElement("div")
+            let img=document.createElement("img")
+            img.setAttribute("src",element.image)
+    
+            let brand=document.createElement("h2")
+            brand.innerText=element.brand
+
+            let description=document.createElement("p")
+            description.innerText=element.desc;
+
+            let price=document.createElement("h1")
+            price.innerText=   `₹${element.price}`;
+
+            let quantity = document.createElement("span");
+            quantity.innerText=element.quantity;
+
+            let Increment = document.createElement("button");
+            let Decrement = document.createElement("button");
+
+            Increment.textContent="+"
+            Decrement.textContent="-"
+            let checkout=document.createElement("button")
+            checkout.innerText="Checkout"
+            let remove=document.createElement("button")
+            remove.innerText="Remove"
+            // ------------------Remove------------------------
+
+            remove.addEventListener("click",()=>{
+            myCart=myCart.filter((ele)=>{
+              return ele.id!==element.id
+            })
+            localStorage.setItem("cart",JSON.stringify(myCart))
+            display(myCart)
+            })
+
+          Increment.addEventListener("click", () => {
+            element=element.quantity++
+          localStorage.setItem("cart",JSON.stringify(myCart))
+          display(myCart)
+        });
+
+        Decrement.addEventListener("click", () => {
+          if(element.quantity>1){
+            element=element.quantity--
+          localStorage.setItem("cart",JSON.stringify(myCart))
+          display(myCart)
+          }
+        });
+        btn.append(remove,checkout)
+            products.append(img)
+            productDetails.append(brand,description,price,Decrement,quantity,Increment,btn)
+          big.append(products,productDetails) 
+          container.append(big)
+
+        });
+
+        let sum=0
+      for(let i=0;i<myCart.length;i++){
+        sum+=myCart[i].price*myCart[i].quantity
+      }
+      total.textContent=sum;
+    let sum1=sum+0;
+      amt.textContent=sum1;
+     
+    }
+    display(myCart);
+</script>
+</html>
