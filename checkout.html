@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="left">
+            <img src="logo.png">
+        </div>
+        <div class="right">
+           
+            <a href="login.html"><i class="fa fa-user fa-2x"></i></a>
+            
+        </div>
+    </div>
+
+<!-- ------------------------------------------------------ -->
+<div id="container">
+    <div id="box1">
+        <h2>Add Shipping Address</h2><hr>
+        
+            <input type="text" placeholder="Name" required><br><br>
+            <input type="text" placeholder="Address" required><br><br>
+            <input type="text" placeholder="Landmark"><br><br>
+            <input type="text" placeholder="City/District"><br><br>
+            <input type="text" placeholder="State"><br><br>
+            <input type="number" placeholder="Pincode" required><br><br>
+            <input type="number" placeholder="Phone Number" required><br><br>
+        <button id="myBtn">Save Address</button>
+       
+            
+    </div>
+    <div id="box2">
+        <h2>Payment Details</h2><hr>
+        <h3>Cards Accepted</h3>
+        <img src="image/pay.jpg" alt="">   
+        <h4>Name on Card</h4>     
+        <input type="text" placeholder="Cardholder's Name">
+        <h4>Card Number</h4>     
+        <input type="text" placeholder="Card Number">
+        <div>
+            <div>
+            <h4>Expiry</h4>
+            <input type="date" placeholder="mm/yyyy" id="date"></div>
+            <div><h4>CVV</h4>
+            <input type="number" placeholder="cvv" id="date"></div>
+        </div>
+        <button id="myBtn2">Pay</button>
+        <div id="b">
+            <img src="https://cdn-icons-png.flaticon.com/128/2038/2038729.png">
+            <img src="https://cdn-icons-png.flaticon.com/128/5790/5790705.png">
+            <img src="https://as1.ftcdn.net/v2/jpg/03/55/70/32/1000_F_355703200_qiSSP7vBEQt9b8GQVmlf6XjNKQhs0sQh.jpg" alt="">
+        </div>
+ 
+    </div>
+</div>
+
+<!-- ------------------------------- -->
+<div class="modal">
+
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Address saved successfully</p>
+    </div>
+  
+</div>
+
+<!-- ----------------------------------- -->
+
+    <div class="popup">
+        <img src="image/tick.png">
+        <h3>Order Placed Successfully</h3>
+        <button id="btn3">OK</button>
+    </div>
+
+</body>
+
+<script>
+    
+    var modal = document.querySelector(".modal");
+     var btn = document.getElementById("myBtn");
+     var span = document.querySelector(".close");
+   
+    btn.addEventListener("click",()=>{
+        modal.style.display = "block";
+    }) 
+    span.addEventListener("click",()=>{
+        modal.style.display="none";
+    })
+
+
+
+    let pop=document.querySelector(".popup")
+    let btn2=document.getElementById("myBtn2")
+    btn2.addEventListener("click",()=>{
+        pop.classList.add("open-popup")
+    })
+    
+
+    let btn3=document.getElementById("btn3")
+    btn3.addEventListener("click",()=>{
+        pop.classList.remove("open-popup")
+       
+    })
+    </script>
+    
+</html>
