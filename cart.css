@@ -79,14 +79,10 @@ a{
 #container2>div{
     background-color: rgb(205, 205, 106);
 }
-#cart-total{
-    margin-left: 90px;
-}#total{
-    margin: 90px;
-}
+
 #container2>button{
     width: 80%;
-    margin:5px 20px;
+    margin:20px 20px 0px 20px;
     font-size: 15px;
     padding: 8px;
     border-radius: 20px;
@@ -96,6 +92,9 @@ a{
 }
 #container2>button:hover{
     background-color: rgb(122, 28, 28);
+}
+#free{
+    color: rgb(47, 255, 57);
 }
 
 /* ---------------------------------------- */
