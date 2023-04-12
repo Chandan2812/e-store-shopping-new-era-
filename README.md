@@ -1,11 +1,19 @@
-# blue-brake-5338
-Ecart - An ecommerce website
+# Ecart - An e-commerce website
+
+deployed link:https://resplendent-granita-caf156.netlify.app/
+
 User side-
+
 1.HOME PAGE
+
 2.LOGIN PAGE
+
 3.REGISTER PAGE
+
 4.PRODUCT PAGE
+
 5.CART PAGE
+
 6.CHEKCOUT PAGE
 
 HOME PAGE
