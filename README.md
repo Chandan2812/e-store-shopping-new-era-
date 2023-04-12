@@ -1,4 +1,12 @@
 # blue-brake-5338
+Ecart - An ecommerce website
+User side-
+1.HOME PAGE
+2.LOGIN PAGE
+3.REGISTER PAGE
+4.PRODUCT PAGE
+5.CART PAGE
+6.CHEKCOUT PAGE
 
 HOME PAGE
 ![screenshot](https://user-images.githubusercontent.com/108578299/231120553-22bc608f-c669-4fce-963c-0cfee199805c.png)
