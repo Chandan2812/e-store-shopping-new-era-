@@ -16,6 +16,8 @@ User side-
 
 6.CHEKCOUT PAGE
 
+Tech Stack: HTML | CSS | JavaScript
+
 HOME PAGE
 ![screenshot](https://user-images.githubusercontent.com/108578299/231120553-22bc608f-c669-4fce-963c-0cfee199805c.png)
 PRODUCT PAGE
